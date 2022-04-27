@@ -6,7 +6,7 @@ Servicio que obtiene el precio de un producto y una marca en un momento dado.
 
 ## API Reference
 
-#### Obtener precio de un producto y una marcar.
+#### Obtener precio de un producto y una marca.
 
 
 #### Request
