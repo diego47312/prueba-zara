@@ -36,7 +36,7 @@ Servicio que obtiene el precio de un producto y una marca en un momento dado.
 
 
 
-## Appendix
+## Notas
 
 
 Se ha hecho el desarrollo con java 11 entendiendo que es la versión más estable LTS.
