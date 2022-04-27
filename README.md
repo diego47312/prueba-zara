@@ -1,6 +1,3 @@
-# prueba-zara-prices
-prueba-zara-prices
-
 # Prueba Zara Prices
 
 Servicio que obtiene el precio de un producto y una marca en un momento dado.
