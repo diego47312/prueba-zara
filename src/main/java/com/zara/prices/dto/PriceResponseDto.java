@@ -1,20 +1,28 @@
 package com.zara.prices.dto;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class PriceResponseDto {
 
 	private Long id;
 
 	private Long brandId;
 
-	private LocalDateTime startDate;
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
+	private Date startDate;
 
-	private LocalDateTime endDate;
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "UTC")
+	private Date endDate;
 
 	private Long productId;
 

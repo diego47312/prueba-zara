@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zara.prices.dto.PriceResponseDto;
 import com.zara.prices.dto.PriceRequestDto;
+import com.zara.prices.dto.PriceResponseDto;
 import com.zara.prices.service.PricesService;
 
 @RestController
@@ -23,7 +23,7 @@ public class PricesController {
 
 	@PostMapping("/findPrices")
 	public ResponseEntity<PriceResponseDto> findPrices(@Valid @RequestBody PriceRequestDto priceRequestDto) {
-		return new ResponseEntity<>(pricesService.findPrices(priceRequestDto), HttpStatus.FOUND);
+		return new ResponseEntity<>(pricesService.findPriceByDateAndProductAndBrand(priceRequestDto), HttpStatus.FOUND);
 	}
 
 }

@@ -50,11 +50,11 @@ El servicio trabaja con fechas UTC en todo momento.
 
 Es una petición Post en vez de Get porque resulta más fácil añadir parámetros a la consulta en caso de necesidad.
 
-Formato de fecha aceptada como parámetro de entrada "yyyy-MM-dd'T'HH:mm:ss" .
+Formato de fecha aceptada como parámetro de entrada "yyyy-MM-dd'T'HH:mm:ss" y mismo formato para la respuesta.
 
 Control básico de excepciones para precio no encontrado, errores de validaciones de parámetros y errores genéricos.
 
-Para los test se ha utilizado Junit 5. Solo se han hecho los test de integración solicitados en la prueba, se podrían haber hecho test independientes por capas(controller, service, dao), o ambos.
+Para los test se ha utilizado Junit 5. HE hecho los test de integración solicitados y alguno para el controller, faltarían algunos para aumentar coverage, pero entiendo que suficientes pra la prueba.
 
 Se han incluido las librerías lombok por el ahorro de código en la creación de pojos y mapstruct para el mapeo entre Dto y entidades, para la separación entre capas del servicio.
 
