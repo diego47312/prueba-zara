@@ -1,6 +1,3 @@
-# prueba-zara-prices
-prueba-zara-prices
-
 # Prueba Zara Prices
 
 Servicio que obtiene el precio de un producto y una marca en un momento dado.
@@ -9,7 +6,7 @@ Servicio que obtiene el precio de un producto y una marca en un momento dado.
 
 ## API Reference
 
-#### Obtener precio de un producto y una marcar.
+#### Obtener precio de un producto y una marca.
 
 
 #### Request
@@ -39,7 +36,7 @@ Servicio que obtiene el precio de un producto y una marca en un momento dado.
 
 
 
-## Appendix
+## Notas
 
 
 Se ha hecho el desarrollo con java 11 entendiendo que es la versión más estable LTS.
