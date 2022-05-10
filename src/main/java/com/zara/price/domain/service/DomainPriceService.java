@@ -1,9 +1,9 @@
 package com.zara.price.domain.service;
 
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
-import com.zara.price.application.request.PriceRequest;
 import com.zara.price.domain.Price;
 import com.zara.price.domain.ResourceNotFoundException;
 import com.zara.price.domain.repository.PriceRepository;
@@ -18,12 +18,12 @@ public class DomainPriceService implements PriceService {
 	}
 
 	@Override
-	public Price findPriceByDateAndProductAndBrand(PriceRequest priceRequest) {
+	public Price findPriceByDateAndProductAndBrand(Long brandId, Long productId, Date date) {
 
 		List<Price> prices = priceRepository.findByBrandIdAndProductIdAndDate(
-				priceRequest.getBrandId(), 
-				priceRequest.getProductId(), 
-				priceRequest.getDate());
+				brandId, 
+				productId, 
+				date);
 		
 		// Si hay mas de un precio para la misma fecha se obtiene el de maxima prioridad
 		return prices

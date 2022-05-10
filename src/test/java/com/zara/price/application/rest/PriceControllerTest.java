@@ -52,7 +52,7 @@ class PriceControllerTest {
 			BigDecimal.valueOf(38.95),
 			"EUR");
 		
-		Mockito.when(priceService.findPriceByDateAndProductAndBrand(Mockito.any())).thenReturn(price);
+		Mockito.when(priceService.findPriceByDateAndProductAndBrand(Mockito.any(),Mockito.any(),Mockito.any())).thenReturn(price);
 	 
 		mockMvc.perform(
 			get("/api/prices")
@@ -75,7 +75,7 @@ class PriceControllerTest {
 		
 		
 
-		Mockito.when(priceService.findPriceByDateAndProductAndBrand(Mockito.any())).thenThrow(new ResourceNotFoundException("No hay precio disponible"));
+		Mockito.when(priceService.findPriceByDateAndProductAndBrand(Mockito.any(),Mockito.any(),Mockito.any())).thenThrow(new ResourceNotFoundException("No hay precio disponible"));
 
 		mockMvc.perform(get("/api/prices")
 				.contentType(MediaType.APPLICATION_JSON)
@@ -91,7 +91,7 @@ class PriceControllerTest {
 	@Test
 	void testFindPircesThrowableException() throws Exception {
 
-		Mockito.when(priceService.findPriceByDateAndProductAndBrand(Mockito.any())).thenThrow(new NullPointerException());
+		Mockito.when(priceService.findPriceByDateAndProductAndBrand(Mockito.any(),Mockito.any(),Mockito.any())).thenThrow(new NullPointerException());
 
 		mockMvc.perform(
 				get("/api/prices")

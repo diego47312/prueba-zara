@@ -30,7 +30,10 @@ public class PriceController {
 
 	@GetMapping
 	public ResponseEntity<PriceResponse> findPrices(@Valid PriceRequest priceRequest) {
-		Price price = priceService.findPriceByDateAndProductAndBrand(priceRequest);
+		Price price = priceService.findPriceByDateAndProductAndBrand(
+				priceRequest.getBrandId(), 
+				priceRequest.getProductId(), 
+				priceRequest.getDate());
 		PriceResponse priceResponse = priceMapper.priceToResponsePrice(price);
 		return new ResponseEntity<>(priceResponse, HttpStatus.FOUND);
 	}
